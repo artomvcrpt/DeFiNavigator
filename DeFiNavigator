@@ -1,0 +1,16 @@
+# scripts/fetch_defi_protocol_data.py
+
+import requests
+import pandas as pd
+
+def fetch_defi_protocol_data():
+    # Example: Fetch DeFi protocol data from an API
+    url = 'https://api.coingecko.com/api/v3/coins/defi'
+    response = requests.get(url)
+    data = response.json()
+    df = pd.DataFrame(data)
+    return df
+
+# Example usage:
+# defi_protocol_data = fetch_defi_protocol_data()
+# print(defi_protocol_data.head())
